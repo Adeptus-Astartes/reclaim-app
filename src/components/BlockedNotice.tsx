@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { useTheme } from '../theme/useTheme';
 
 type Props = {
   platformName: string;
@@ -9,7 +10,7 @@ type Props = {
 };
 
 export function BlockedNotice({ platformName, onBackToFeed, onDismiss }: Props) {
-  const insets = useSafeAreaInsets();
+  const { colors } = useTheme();
 
   useEffect(() => {
     const timer = setTimeout(onDismiss, 3800);
@@ -17,18 +18,18 @@ export function BlockedNotice({ platformName, onBackToFeed, onDismiss }: Props) 
   }, [onDismiss]);
 
   return (
-    <View pointerEvents="box-none" style={[styles.wrap, { bottom: insets.bottom + 16 }]}>
-      <View style={styles.card}>
+    <View pointerEvents="box-none" style={styles.wrap}>
+      <View style={[styles.card, { backgroundColor: colors.notice }]}>
         <View style={styles.copy}>
-          <Text style={styles.title}>Short videos are blocked</Text>
-          <Text style={styles.body}>Reclaim kept you on {platformName}.</Text>
+          <Text style={[styles.title, { color: colors.noticeText }]}>Short videos are blocked</Text>
+          <Text style={[styles.body, { color: colors.noticeMuted }]}>Reclaim kept you on {platformName}.</Text>
         </View>
         <View style={styles.actions}>
-          <Pressable onPress={onBackToFeed} style={styles.primary}>
-            <Text style={styles.primaryText}>Back to feed</Text>
+          <Pressable onPress={onBackToFeed} style={[styles.primary, { backgroundColor: colors.accent }]}>
+            <Text style={[styles.primaryText, { color: colors.accentText }]}>Back to feed</Text>
           </Pressable>
           <Pressable onPress={onDismiss} hitSlop={8} style={styles.dismiss}>
-            <Text style={styles.dismissText}>Dismiss</Text>
+            <Text style={[styles.dismissText, { color: colors.noticeMuted }]}>Dismiss</Text>
           </Pressable>
         </View>
       </View>
@@ -43,7 +44,6 @@ const styles = StyleSheet.create({
     right: 16,
   },
   card: {
-    backgroundColor: '#17211c',
     borderRadius: 16,
     paddingHorizontal: 16,
     paddingVertical: 14,
@@ -53,12 +53,10 @@ const styles = StyleSheet.create({
     gap: 2,
   },
   title: {
-    color: '#f3f6f4',
     fontSize: 16,
     fontWeight: '600',
   },
   body: {
-    color: '#b7c2bb',
     fontSize: 14,
   },
   actions: {
@@ -67,13 +65,11 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   primary: {
-    backgroundColor: '#d7f26a',
     borderRadius: 999,
     paddingHorizontal: 14,
     paddingVertical: 8,
   },
   primaryText: {
-    color: '#142016',
     fontSize: 14,
     fontWeight: '700',
   },
@@ -81,7 +77,6 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
   },
   dismissText: {
-    color: '#d5ddd8',
     fontSize: 14,
   },
 });

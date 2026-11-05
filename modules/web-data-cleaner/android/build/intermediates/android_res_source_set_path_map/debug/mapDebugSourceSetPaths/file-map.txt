@@ -1,0 +1,9 @@
+expo.modules.webdatacleaner.web-data-cleaner-pngs-0 /Users/vadymt/Documents/GitHub/reclaim-app/modules/web-data-cleaner/android/build/generated/res/pngs/debug
+expo.modules.webdatacleaner.web-data-cleaner-updated_navigation_xml-1 /Users/vadymt/Documents/GitHub/reclaim-app/modules/web-data-cleaner/android/build/generated/updated_navigation_xml/debug
+expo.modules.webdatacleaner.web-data-cleaner-mergeDebugResources-2 /Users/vadymt/Documents/GitHub/reclaim-app/modules/web-data-cleaner/android/build/intermediates/incremental/debug/mergeDebugResources/merged.dir
+expo.modules.webdatacleaner.web-data-cleaner-mergeDebugResources-3 /Users/vadymt/Documents/GitHub/reclaim-app/modules/web-data-cleaner/android/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir
+expo.modules.webdatacleaner.web-data-cleaner-debug-4 /Users/vadymt/Documents/GitHub/reclaim-app/modules/web-data-cleaner/android/build/intermediates/merged_res/debug/mergeDebugResources
+expo.modules.webdatacleaner.web-data-cleaner-debug-5 /Users/vadymt/Documents/GitHub/reclaim-app/modules/web-data-cleaner/android/build/intermediates/packaged_res/debug/packageDebugResources
+expo.modules.webdatacleaner.web-data-cleaner-debug-6 /Users/vadymt/Documents/GitHub/reclaim-app/modules/web-data-cleaner/android/src/debug/res
+expo.modules.webdatacleaner.web-data-cleaner-main-7 /Users/vadymt/Documents/GitHub/reclaim-app/modules/web-data-cleaner/android/src/main/res
+gradleHome-0 /Users/vadymt/.gradle

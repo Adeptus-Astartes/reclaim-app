@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["WebDataCleanerModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.webdatacleaner.WebDataCleanerModule"]
+  }
+}

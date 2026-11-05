@@ -1,0 +1,14 @@
+RECLAIM — EDITABLE FIGMA LOGO
+
+Files:
+  Reclaim_Figma_Editable_Layers.svg  — full logo with grouped vector layers
+  Reclaim_Icon_Editable.svg          — icon only with transparent background
+
+How to edit in Figma:
+1. Drag an SVG into a Figma design file.
+2. Use the Layers panel. Each numbered group represents a separate logical layer.
+3. Ungroup (Ctrl/Cmd + Shift + G) as needed to select individual letters, tick marks, feed bars or rays.
+4. To recolor the ring or swoosh, select its vector path and edit the gradient under Fill.
+5. The wordmark was traced as vector outlines, so its shape is editable but it is not a live font/text element. If you need to change the words, recreate them as text using a visually similar bold geometric font, such as Poppins ExtraBold.
+
+Note: This SVG is a close vector reconstruction of an AI-generated PNG, not the original source vector artwork. Some tiny antialiasing/highlight details from the PNG are simplified.

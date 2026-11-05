@@ -1,21 +1,58 @@
 import { router } from 'expo-router';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { Image, Pressable, StyleSheet, Text, View, type ImageSourcePropType } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { AppTitle } from '../src/components/AppTitle';
+import { SettingsIcon } from '../src/components/icons';
 import { platforms } from '../src/platforms';
+import { useTheme } from '../src/theme/useTheme';
+
+const platformIcons: Partial<Record<string, ImageSourcePropType>> = {
+  instagram: require('../assets/graphics/vendors/ig.png'),
+};
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
+  const { colors } = useTheme();
 
   return (
-    <View style={[styles.screen, { paddingTop: insets.top + 28, paddingBottom: insets.bottom + 24 }]}>
-      <Text style={styles.wordmark}>reclaim</Text>
-      <Text style={styles.tagline}>Social apps, without the short-video feeds.</Text>
+    <View
+      style={[
+        styles.screen,
+        {
+          backgroundColor: colors.background,
+          paddingTop: insets.top + 20,
+          paddingBottom: insets.bottom + 24,
+        },
+      ]}
+    >
+      <View style={styles.header}>
+        <View style={styles.heading}>
+          <AppTitle />
+          <Text style={[styles.tagline, { color: colors.mutedText }]}>
+            Take back your time and attention.
+          </Text>
+        </View>
+        <Pressable
+          accessibilityRole="button"
+          accessibilityLabel="Settings"
+          onPress={() => router.push('/settings')}
+          style={({ pressed }) => [
+            styles.gear,
+            { backgroundColor: colors.surface, opacity: pressed ? 0.7 : 1 },
+          ]}
+        >
+          <SettingsIcon color={colors.text} />
+        </Pressable>
+      </View>
       <View style={styles.list}>
         {platforms.map((platform) => (
           <Pressable
             key={platform.id}
-            style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
+            style={({ pressed }) => [
+              styles.card,
+              { backgroundColor: colors.surface, opacity: pressed ? 0.8 : 1 },
+            ]}
             onPress={() =>
               router.push({
                 pathname: '/[platform]',
@@ -23,12 +60,21 @@ export default function HomeScreen() {
               })
             }
           >
-            <View style={styles.mark}>
-              <Text style={styles.markText}>{platform.name.slice(0, 1)}</Text>
+            <View
+              style={[
+                styles.mark,
+                platformIcons[platform.id] ? null : { backgroundColor: colors.surfaceRaised },
+              ]}
+            >
+              {platformIcons[platform.id] ? (
+                <Image source={platformIcons[platform.id]!} style={styles.markImage} />
+              ) : (
+                <Text style={[styles.markText, { color: colors.text }]}>{platform.name.slice(0, 1)}</Text>
+              )}
             </View>
             <View style={styles.cardBody}>
-              <Text style={styles.cardTitle}>{platform.name}</Text>
-              <Text style={styles.cardMeta}>Short videos blocked</Text>
+              <Text style={[styles.cardTitle, { color: colors.text }]}>{platform.name}</Text>
+              <Text style={[styles.cardMeta, { color: colors.mutedText }]}>Short videos blocked</Text>
             </View>
           </Pressable>
         ))}
@@ -40,21 +86,29 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#101412',
     paddingHorizontal: 24,
   },
-  wordmark: {
-    color: '#f3f6f4',
-    fontSize: 40,
-    fontWeight: '700',
-    letterSpacing: -1,
+  header: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    justifyContent: 'space-between',
+    gap: 16,
+  },
+  heading: {
+    flex: 1,
+    gap: 8,
   },
   tagline: {
-    marginTop: 8,
-    color: '#b7c2bb',
     fontSize: 17,
     lineHeight: 24,
     maxWidth: 280,
+  },
+  gear: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   list: {
     marginTop: 36,
@@ -64,24 +118,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 14,
-    backgroundColor: '#1a2420',
     borderRadius: 18,
     paddingHorizontal: 16,
     paddingVertical: 16,
   },
-  cardPressed: {
-    opacity: 0.8,
-  },
   mark: {
     width: 44,
     height: 44,
-    borderRadius: 14,
-    backgroundColor: '#24312b',
+    borderRadius: 12,
+    overflow: 'hidden',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  markImage: {
+    width: 44,
+    height: 44,
+  },
   markText: {
-    color: '#d7f26a',
     fontSize: 18,
     fontWeight: '700',
   },
@@ -89,12 +142,10 @@ const styles = StyleSheet.create({
     gap: 2,
   },
   cardTitle: {
-    color: '#f3f6f4',
     fontSize: 17,
     fontWeight: '600',
   },
   cardMeta: {
-    color: '#8f9c95',
     fontSize: 14,
   },
 });

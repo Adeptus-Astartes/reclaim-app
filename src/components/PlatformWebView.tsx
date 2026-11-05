@@ -6,6 +6,7 @@ import type { ShouldStartLoadRequest, WebViewNavigation } from 'react-native-web
 import { buildInjectedScript } from '../engine/buildInjectedScript';
 import { evaluateNavigation, redirectUrlFor } from '../engine/urlGuard';
 import type { PlatformAdapter } from '../platforms/types';
+import { useTheme } from '../theme/useTheme';
 import { BlockedNotice } from './BlockedNotice';
 
 const MOBILE_USER_AGENT = {
@@ -19,6 +20,7 @@ type Props = {
 };
 
 export function PlatformWebView({ adapter }: Props) {
+  const { colors } = useTheme();
   const webRef = useRef<WebView<Record<string, unknown>>>(null);
   const canGoBack = useRef(false);
   const redirecting = useRef(false);
@@ -103,7 +105,7 @@ export function PlatformWebView({ adapter }: Props) {
   );
 
   return (
-    <View style={styles.fill}>
+    <View style={[styles.fill, { backgroundColor: colors.background }]}>
       <WebView<Record<string, unknown>>
         ref={webRef}
         source={{ uri: adapter.homeUrl }}
@@ -126,8 +128,8 @@ export function PlatformWebView({ adapter }: Props) {
         autoManageStatusBarEnabled={false}
       />
       {loading ? (
-        <View style={styles.loading}>
-          <ActivityIndicator color="#1c1c1c" />
+        <View style={[styles.loading, { backgroundColor: colors.background }]}>
+          <ActivityIndicator color={colors.text} />
         </View>
       ) : null}
       {blockedPath ? (
@@ -140,12 +142,10 @@ export function PlatformWebView({ adapter }: Props) {
 const styles = StyleSheet.create({
   fill: {
     flex: 1,
-    backgroundColor: '#ffffff',
   },
   loading: {
     ...StyleSheet.absoluteFill,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ffffff',
   },
 });

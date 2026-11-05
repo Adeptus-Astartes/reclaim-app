@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="700" height="700" viewBox="280 140 700 700" role="img" aria-labelledby="title desc">
+<title id="title">Reclaim — editable purple-gradient logo</title>
+<desc id="desc">Reconstructed layered vector SVG. Open in Figma and ungroup to edit independent shapes. Wordmark letters are outlined paths to preserve the generated design.</desc>
+<defs>
+<linearGradient id="ringGradient" gradientUnits="userSpaceOnUse" x1="400" y1="730" x2="777" y2="176">
+<stop offset="0%" stop-color="#3b05cc"/><stop offset="42%" stop-color="#7a10f4"/><stop offset="100%" stop-color="#c844f5"/>
+</linearGradient>
+<linearGradient id="slashGradient" gradientUnits="userSpaceOnUse" x1="435" y1="666" x2="758" y2="453">
+<stop offset="0%" stop-color="#6b08ea"/><stop offset="65%" stop-color="#a52cf4"/><stop offset="100%" stop-color="#bd3bf1"/>
+</linearGradient>
+<linearGradient id="rayGradient" gradientUnits="userSpaceOnUse" x1="715" y1="400" x2="721" y2="308">
+<stop offset="0%" stop-color="#5403de"/><stop offset="100%" stop-color="#b72cf6"/>
+</linearGradient>
+<linearGradient id="phoneGradient" gradientUnits="userSpaceOnUse" x1="503" y1="355" x2="743" y2="669">
+<stop offset="0%" stop-color="#08182c"/><stop offset="60%" stop-color="#0c1b2d"/><stop offset="100%" stop-color="#29394b"/>
+</linearGradient>
+<linearGradient id="barGradient" gradientUnits="userSpaceOnUse" x1="520" y1="375" x2="705" y2="640">
+<stop offset="0%" stop-color="#65778b"/><stop offset="100%" stop-color="#96a0ab"/>
+</linearGradient>
+</defs>
+<g id="circular-arrow" inkscape:groupmode="layer" inkscape:label="01 / Circular arrow (purple gradient)"><path fill="url(#ringGradient)" fill-rule="evenodd" d="M622 174 L621 175 L594 176 L593 177 L587 177 L586 178 L580 178 L579 179 L565 181 L533 190 L530 192 L517 196 L501 204 L499 204 L497 206 L482 213 L467 222 L443 239 L426 253 L398 281 L378 306 L358 337 L345 363 L335 388 L324 428 L322 444 L321 445 L321 454 L320 455 L320 464 L319 465 L319 505 L320 506 L320 516 L321 517 L321 525 L322 526 L323 537 L327 552 L327 556 L329 560 L329 564 L339 595 L346 610 L346 612 L353 625 L353 627 L355 629 L355 631 L357 633 L368 654 L384 678 L398 696 L421 720 L453 747 L474 761 L510 780 L512 780 L527 787 L545 793 L575 800 L586 801 L587 802 L606 803 L607 804 L644 804 L645 803 L654 803 L655 802 L673 800 L702 793 L738 780 L763 768 L785 755 L810 737 L824 725 L850 699 L871 673 L887 649 L894 637 L911 601 L921 572 L929 538 L929 532 L931 524 L931 515 L932 514 L933 478 L932 477 L931 454 L930 453 L930 447 L929 446 L927 431 L922 415 L922 412 L914 389 L911 383 L902 374 L895 371 L885 371 L877 375 L872 381 L869 389 L869 394 L877 416 L883 441 L885 463 L886 464 L886 503 L885 504 L885 513 L884 514 L884 520 L883 521 L883 526 L882 527 L882 532 L879 542 L879 546 L865 588 L853 613 L843 630 L826 654 L806 677 L788 694 L769 709 L749 722 L724 735 L699 745 L696 745 L682 750 L678 750 L658 755 L643 756 L642 757 L608 757 L607 756 L591 755 L590 754 L575 752 L559 747 L556 747 L527 736 L497 720 L467 698 L462 693 L465 689 L461 691 L424 652 L405 624 L388 591 L376 558 L371 538 L369 523 L368 522 L368 516 L367 515 L366 488 L365 487 L366 460 L367 459 L367 452 L368 451 L370 434 L375 414 L386 383 L398 359 L413 335 L430 313 L446 296 L469 276 L492 260 L511 249 L535 238 L561 229 L582 225 L583 224 L588 224 L595 222 L603 222 L604 221 L633 220 L634 221 L647 221 L648 222 L663 223 L696 231 L725 242 L745 252 L767 266 L770 270 L752 286 L749 290 L750 298 L755 301 L759 301 L763 303 L775 305 L779 307 L814 315 L818 317 L822 317 L826 319 L858 327 L865 325 L868 321 L867 309 L863 293 L861 289 L858 274 L856 270 L854 259 L852 255 L843 216 L839 212 L832 212 L830 213 L804 237 L787 225 L762 210 L742 200 L717 190 L695 183 L691 183 L672 178 L650 176 L649 175 Z"/></g>
+<g id="clock-ticks" inkscape:groupmode="layer" inkscape:label="02 / Clock tick marks"><path id="tick-12" fill="#06182c" d="M623 239 L619 244 L619 283 L623 288 L628 289 L632 287 L634 284 L634 244 L630 239 Z"/>
+<path id="tick-3" fill="#06182c" d="M815 483 L815 489 L816 491 L820 494 L863 494 L865 493 L869 488 L869 484 L868 482 L865 479 L862 478 L822 478 L817 480 Z"/>
+<path id="tick-6" fill="#06182c" d="M624 697 L622 698 L619 702 L619 735 L622 739 L629 740 L634 736 L634 701 L632 698 L630 697 Z"/>
+<path id="tick-9" fill="#06182c" d="M383 484 L384 489 L389 493 L432 493 L436 490 L438 486 L437 481 L432 477 L388 477 L384 481 Z"/></g>
+<g id="phone-top" inkscape:groupmode="layer" inkscape:label="03 / Phone - top"><path fill="url(#phoneGradient)" d="M668 350 L654 342 L642 339 L538 339 L526 342 L516 347 L507 354 L500 362 L493 375 L490 389 L490 592 L491 593 L649 513 L670 499 L689 480 L689 384 L686 374 L681 364 Z"/></g>
+<g id="phone-bottom" inkscape:groupmode="layer" inkscape:label="04 / Phone - bottom"><path fill="url(#phoneGradient)" d="M733 501 L714 519 L693 534 L616 576 L566 607 L535 628 L505 652 L508 659 L515 667 L527 675 L544 680 L683 680 L699 676 L710 670 L719 662 L725 654 L731 640 L733 629 Z"/></g>
+<g id="feed-bars" inkscape:groupmode="layer" inkscape:label="05 / Feed bars (4 editable objects)"><rect id="line-top" x="525" y="369" width="129" height="26" rx="13" fill="url(#barGradient)" />
+<rect id="line-second" x="516" y="408" width="117" height="26" rx="13" fill="url(#barGradient)" />
+<rect id="line-bottom-upper" x="615" y="581" width="89" height="27" rx="13" fill="url(#barGradient)" />
+<rect id="line-bottom-lower" x="557" y="620" width="140" height="26" rx="13" fill="url(#barGradient)" /></g>
+<g id="play-button" inkscape:groupmode="layer" inkscape:label="06 / Play button"><path d="M 568 459 C 564 459 562 463 562 468 L 562 516 C 562 524 568 528 575 524 L 618 499 C 625 495 625 489 618 486 L 576 461 C 573 459 570 458 568 459 Z" fill="#ffffff"/></g>
+<g id="break-free-swoosh" inkscape:groupmode="layer" inkscape:label="07 / Break-free swoosh (purple gradient)"><path fill="url(#slashGradient)" d="M762 451 L731 478 L698 501 L681 510 L679 512 L668 517 L666 519 L590 557 L579 564 L566 570 L557 576 L534 588 L510 603 L505 605 L481 621 L478 622 L429 656 L461 690 L464 689 L499 655 L504 652 L524 635 L528 633 L545 620 L616 575 L648 558 L650 556 L657 553 L659 551 L668 547 L670 545 L679 541 L681 539 L693 533 L709 522 L720 513 L720 512 L733 500 L747 482 L759 460 Z"/></g>
+<g id="accent-rays" inkscape:groupmode="layer" inkscape:label="08 / Accent rays (3 editable objects)"><path id="ray-1" fill="url(#rayGradient)" d="M717 302 L708 302 L704 305 L697 322 L693 336 L691 339 L690 349 L694 354 L698 356 L705 355 L710 350 L718 326 L720 323 L723 314 L723 309 L720 304 Z"/>
+<path id="ray-2" fill="url(#rayGradient)" d="M767 341 L761 337 L756 337 L749 341 L729 356 L721 364 L720 370 L722 375 L725 378 L730 380 L735 379 L763 359 L769 352 L769 344 Z"/>
+<path id="ray-3" fill="url(#rayGradient)" d="M734 402 L735 410 L740 415 L743 416 L781 416 L787 413 L790 408 L790 402 L788 398 L782 394 L742 394 L738 396 Z"/></g>
+</svg>
